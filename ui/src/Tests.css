@@ -1,0 +1,67 @@
+/* Tests.css */
+
+.tests-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 20px;
+}
+
+.tests-wrapper {
+  display: flex; /* Display children in a flex container */
+  flex-wrap: nowrap; /* Prevent wrapping items to a new line */
+  gap: 20px; /* Gap between test boxes */
+}
+
+.test-box {
+  flex: 0 0 auto; /* Maintain original width, don't grow or shrink */
+  min-width: 200px; /* Set a minimum width for each test box */
+  padding: 15px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: left;
+}
+.test-fullscreen {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: rgb(111, 111, 203); /* Set background color to blue */
+  display: flex;
+  justify-content: center;
+  min-height: 80vh; /* Adjust height as needed */
+  border-radius: 20px;
+}
+
+.test-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 80%; /* Limit content width */
+}
+
+.test-question {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Adjust the scrollbar style */
+.tests-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tests-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.tests-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.tests-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
