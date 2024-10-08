@@ -1,5 +1,5 @@
-const connectionString =
-  "Enter you connection string";
+const connectionString ="";
+//UPDATE CONNECTION STRING TO USE
 
 module.exports = {
     connectionString
