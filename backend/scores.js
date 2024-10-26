@@ -7,7 +7,7 @@ const schemaScores = new mongoose.Schema({
   
   rollNo: String,
   // testID: String,
-  score: [Number],
+  score: Number,
 });
 
 const scoresModel = mongoose.model("scores", schemaScores);
