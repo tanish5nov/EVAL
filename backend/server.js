@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/loadTests", async (req, res) => {
-  const data = await modelTest.find({});
+  const data = await testBankModel.find({});
   console.log("Data sent successfully");
   res.json(data);
 });
@@ -33,7 +33,7 @@ app.get("/loadTests", async (req, res) => {
 app.post("/login", async (req, res) => {
   const type = req.body.type;
   const userId = req.body.userId;
-  const data = await modelLogin.find({ type: type, userId: userId });
+  const data = await loginModel.find({ type: type, userId: userId });
   if (data.length == 0) {
     res.json("false");
   } else {
@@ -43,19 +43,19 @@ app.post("/login", async (req, res) => {
 
 app.post("/loadQuestionPaper", async (req, res) => {
   const testId = req.body.testID;
-  const data = await modelTest.findById(testId);
+  const data = await testBankModel.findById(testId);
   console.log(testId);
   console.log(data);
   const arr = [];
   for (let i = 0; i < data.questionId.length; ++i) {
     const id = data.questionId[i];
-    arr.push(await modelQuestion.findById(id));
+    arr.push(await questionsModel.findById(id));
   }
   res.json(arr);
 });
 
 app.post("/createNewTest", (req, res) => {
-  const testId = new modelTest({
+  const testId = new testBankModel({
     questionId: [],
   });
   testId.save();
@@ -66,7 +66,7 @@ app.post("/updateTest", async (req, res) => {
   const testID = req.body.testId;
   const questionIDs = req.body.questionIds;
 
-  const data = await modelTest.updateOne(
+  const data = await testBankModel.updateOne(
     { _id: testID },
     { $push: { questionId: { $each: questionIDs } } }
   );
@@ -77,7 +77,7 @@ app.post("/updateTest", async (req, res) => {
 app.post("/loadProblems", async (req, res) => {
   const subject = req.body.subject;
   const level = req.body.level;
-  const data = await modelQuestion.find({
+  const data = await questionsModel.find({
     subject: subject,
     level: level,
   });
@@ -95,7 +95,7 @@ app.post("/addProblem", (req, res) => {
     subject,
     level,
   } = req.body;
-  const data = new modelQuestion({
+  const data = new questionsModel({
     problemStatement,
     option1,
     option2,
@@ -106,7 +106,7 @@ app.post("/addProblem", (req, res) => {
   });
   data.save();
   const questionId = data._id;
-  const dataAns = new modelAnswer({
+  const dataAns = new answerModel({
     questionId,
     corectOption: answer,
   });
@@ -121,14 +121,14 @@ app.post("/calculateScore", async (req, res) => {
   const testID = req.body.testID;
   let score = 0;
   for (let i = 0; i < questionIDs.length; ++i) {
-    const ans = await modelAnswer.findOne({
+    const ans = await answerModel.findOne({
       questionId: questionIDs[i],
     });
     if (ans.corectOption === options[i]) {
       score += 1;
     }
   }
-  const data = new modelScores({
+  const data = new scoresModel({
     rollNo,
     testID,
     score,
