@@ -2,6 +2,7 @@ import express from "./express";
 import bodyParser from "./body-parser";
 import { modelTest } from "./testBank";
 import { modelQuestion } from "./questionBank";
+import { modelQuestion } from "./questions";
 import { modelScores } from "./scores";
 import { modelAnswer } from "./answerBank";
 import { modelLogin } from "./loginBank";
