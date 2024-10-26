@@ -16,8 +16,5 @@ const schemaTest = new mongoose.Schema({
   ]
 });
 
-const modelTest = mongoose.model("testBank", schemaTest);
+export default mongoose.model("testBank", schemaTest);
 
-module.exports = {
-  modelTest,
-};
