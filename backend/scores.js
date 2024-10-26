@@ -5,12 +5,12 @@ mongoose.connect(connectionString);
 
 const schemaScores = new mongoose.Schema({
   rollNo: String,
-  testID: String,
+  // testID: String,
   score: Number,
 });
 
-const modelScores = mongoose.model("scores", schemaScores);
+export default mongoose.model("scores", schemaScores);
 
-module.exports = {
-  modelScores,
-};
+// module.exports = {
+//   modelScores,
+// };
