@@ -8,7 +8,9 @@ const schemaLogin = new mongoose.Schema({
   type: String,
 });
 
-export default mongoose.model("loginBank", schemaLogin);
+const loginModel = mongoose.model("loginBank", schemaLogin);
+
+export default loginModel;
 
 // module.exports = {
   // modelLogin,
