@@ -25,6 +25,8 @@ const schemaQuestion = new mongoose.Schema({
   correctAnswer: String,
 });
 
+schemaQuestion.index({problemStatement: 1});
+
 export default mongoose.model("questions", schemaQuestion);
 
 // module.exports = {
