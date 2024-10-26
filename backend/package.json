@@ -2,7 +2,7 @@
   "name": "eval",
   "version": "1.0.0",
   "description": "Link for the high level design - [ <a href=\"https://miro.com/app/board/uXjVN_Jvbxo=/?share_link_id=552601086246\">Board</a> ]",
-  "main": "addQuestion.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
