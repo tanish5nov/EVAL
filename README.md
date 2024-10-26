@@ -1,6 +1,6 @@
 # Eval : Online Tests Platform
 
-EVAL, an online assessment system designed to facilitate efficient question management and testing processes. The system is built using MongoDB and Mongoose for data storage.
+EVAL, an online assessment system designed to facilitate efficient question management and testing processes.
 
 # Question Bank: 
 A centralized repository, allowing for efficient retrieval and management of questions. The question schema includes various attributes such as problem statements, options, difficulty levels, and subjects.
