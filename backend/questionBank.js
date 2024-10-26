@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { connectionString } = require("./connectionString");
+import mongoose from 'mongoose';
+import { connectionString } from "./connectionString";
 
 mongoose.connect(connectionString);
 
