@@ -14,4 +14,6 @@ const schemaQuestion = new mongoose.Schema({
 // schemaQuestion.index({question: -1});//descending order
 schemaQuestion.index({question: 1});//ascending order
 
-export default mongoose.model("questionBank", schemaQuestion);
+const questionBankModel = mongoose.model("questionBank", schemaQuestion);
+  
+export default questionBankModel;
