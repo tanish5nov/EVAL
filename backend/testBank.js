@@ -16,5 +16,7 @@ const schemaTest = new mongoose.Schema({
   ]
 });
 
-export default mongoose.model("testBank", schemaTest);
+const testBankModel = mongoose.model("testBank", schemaTest);
+
+export default testBankModel;
 
