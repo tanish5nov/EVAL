@@ -10,7 +10,7 @@ const schemaTest = new mongoose.Schema({
     questions: [
     {
       type: String,
-      ref: "questions"
+      ref: "questions",
     }
     ]
   ]
