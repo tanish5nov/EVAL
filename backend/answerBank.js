@@ -8,8 +8,8 @@ const schemaAnswer = new mongoose.Schema({
   corectOption: String,
 });
 
-const modelAnswer = mongoose.model('answerBank', schemaAnswer);
+export default mongoose.model('answerBank', schemaAnswer);
 
-module.exports = {
-  modelAnswer,
-};
+// module.exports = {
+//   modelAnswer,
+// };
