@@ -10,7 +10,9 @@ const schemaScores = new mongoose.Schema({
   score: [Number],
 });
 
-export default mongoose.model("scores", schemaScores);
+const scoresModel = mongoose.model("scores", schemaScores);
+
+export default scoresModel;
 
 // module.exports = {
 //   modelScores,
