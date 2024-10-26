@@ -4,13 +4,12 @@ const { connectionString } = require("./connectionString");
 mongoose.connect(connectionString);
 
 const schemaQuestion = new mongoose.Schema({
-  problemStatement: String,
-  option1: String,
-  option2: String,
-  option3: String,
-  option4: String,
-  subject: String,
-  level: String,
+  question: [
+    {
+      type: String,
+      ref: "questions",
+    }
+  ]
 });
 
 const modelQuestion = mongoose.model("questionBank", schemaQuestion);
