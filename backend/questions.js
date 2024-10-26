@@ -27,7 +27,9 @@ const schemaQuestion = new mongoose.Schema({
 
 schemaQuestion.index({problemStatement: 1});
 
-export default mongoose.model("questions", schemaQuestion);
+const questionsModel = mongoose.model("questions", schemaQuestion);
+
+export default questionsModel;
 
 // module.exports = {
   // modelQuestion,
