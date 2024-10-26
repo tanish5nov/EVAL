@@ -1,11 +1,11 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const { modelTest } = require("./testBank");
-const { modelQuestion } = require("./questionBank");
-const { modelScores } = require("./scores");
-const { modelAnswer } = require("./answerBank");
-const { modelLogin } = require("./loginBank");
-const cors = require("cors");
+import express from "./express";
+import bodyParser from "./body-parser";
+import { modelTest } from "./testBank";
+import { modelQuestion } from "./questionBank";
+import { modelScores } from "./scores";
+import { modelAnswer } from "./answerBank";
+import { modelLogin } from "./loginBank";
+import cors from "cors";
 
 const PORT = process.env.PORT || 3000;
 
