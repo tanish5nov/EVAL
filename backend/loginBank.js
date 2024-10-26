@@ -8,8 +8,8 @@ const schemaLogin = new mongoose.Schema({
   type: String,
 });
 
-const modelLogin = mongoose.model("loginBank", schemaLogin);
+export default mongoose.model("loginBank", schemaLogin);
 
-module.exports = {
-  modelLogin,
-};
+// module.exports = {
+  // modelLogin,
+// };
