@@ -1,11 +1,11 @@
 import express from "./express";
 import bodyParser from "./body-parser";
-import { modelTest } from "./testBank";
-import { modelQuestion } from "./questionBank.js";
-import { modelQuestion } from "./questions.js";
-import { modelScores } from "./scores.js";
-import { modelAnswer } from "./answerBank.js";
-import { modelLogin } from "./loginBank.js";
+import { testBankModel } from "./testBank";
+import { questionBankModel } from "./questionBank.js";
+import { questionsModel } from "./questions.js";
+import { scoresModel } from "./scores.js";
+import { answerModel } from "./answerBank.js";
+import { loginModel } from "./loginBank.js";
 import cors from "cors";
 
 const PORT = process.env.PORT || 3000;
