@@ -25,8 +25,8 @@ const schemaQuestion = new mongoose.Schema({
   correctAnswer: String,
 });
 
-const modelQuestion = mongoose.model("questions", schemaQuestion);
+export default mongoose.model("questions", schemaQuestion);
 
-module.exports = {
-  modelQuestion,
-};
+// module.exports = {
+  // modelQuestion,
+// };
