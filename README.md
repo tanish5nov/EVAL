@@ -1,4 +1,4 @@
-# Eval :- Online Tests Platform;
+# Eval :- Online Tests Platform
 
 EVAL, an online assessment system designed to facilitate efficient question management and testing processes.
 
